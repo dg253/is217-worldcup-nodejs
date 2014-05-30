@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  h1= title
+  div
+  form.form-horizontal(method="post", action='/countries/update/#{id}', enctype="multipart/form-data")
+      .control-group
+        label.control-label(for='year') Year
+        .controls
+          input#title.input-input-xlarge(type='text', value="#{year}", name="year", placeholder='Enter the year')
+      .control-group
+        label.control-label(for='team') Country Name
+        .controls
+          input#cid.input-input-xlarge(type='text', value="#{team}", name="team", placeholder='Enter country name')
+      .control-group
+        label.control-label(for='section') ISO
+        .controls
+          input#title.input-input-xlarge(type='text', value="#{iso}", name="iso", placeholder='Enter ISO')
+      .control-group
+        .controls
+          input(type='submit',value='Save')
+

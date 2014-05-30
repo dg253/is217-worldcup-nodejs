@@ -1,0 +1,60 @@
+h3 {
+	color:#41A317;
+	-webkit-transition: color .5s; /* For Safari 3.1 to 6.0 */
+	transition: color .5s;
+	transition-timing-function: ease;
+}
+
+h3:hover {
+	color: #625D5D;
+}
+
+h1 {
+	font-family: "Montserrat";
+	font-size: 3em;
+}
+
+body {
+  padding: 50px;
+  font: 14px "Montserrat", Helvetica, Arial, sans-serif;
+}
+a {
+  color: #00b7ff;
+}
+
+div.img-div{
+    height:150px;
+    width:150px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.img-div img{
+    -webkit-transform:translate(-52%);
+    margin-left:100px;
+    width:130px; /* you can use % */
+    height: auto;
+    
+}
+
+hr {
+    border: none;
+    height: 1.5px;
+    /* Set the hr color */
+    color: #383838;
+    background-color: #383838;
+}
+
+div.team-div{
+    height:250px;
+    width:244px;
+    overflow:hidden;
+    border-radius:50%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.team-div img{
+    -webkit-transform:translate(-40%);
+    margin-left:96px;
+}

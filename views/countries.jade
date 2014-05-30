@@ -1,0 +1,36 @@
+extends layout
+
+block content
+  p Welcome to #{title}
+  div
+    table
+      thead
+        tr
+          th Year
+          th Team
+          th ISO
+          th Shots on Goal
+      tbody
+        each country, i in countries
+          tr(class=(i % 2 == 0) ? 'odd' : 'even')
+           td= country.Year
+           td 
+              a(href='/countries/' + country._id) #{country.Team}
+           td= country.ISO
+
+    form.form-horizontal(method="post", action='/countries/add', enctype="multipart/form-data")
+      .control-group
+        label.control-label(for='year') Year
+        .controls
+          input#title.input-input-xlarge(type='number', name="year", placeholder='Enter the year')
+      .control-group
+        label.control-label(for='team') Country Name 
+        .controls
+          input#cid.input-input-xlarge(type='text', name="team", placeholder='Enter the country name')
+      .control-group
+        label.control-label(for='iso') ISO
+        .controls
+          input#title.input-input-xlarge(type='text', name="iso", placeholder='Enter the ISO')
+      .control-group
+        .controls
+          input(type='submit',value='Save')
